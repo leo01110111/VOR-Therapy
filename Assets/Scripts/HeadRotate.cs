@@ -10,15 +10,12 @@ public class HeadRotate : MonoBehaviour
 {
     public float yRotation;
 
-    public TextMeshProUGUI LocText;
-
     public GameObject CameraOffset;
     public GameObject MainCamera;
     
     void Update()
     {
         yRotation = (float)Math.Round(270 - MainCamera.transform.rotation.eulerAngles.y);
-        LocText.text = Math.Abs(yRotation).ToString();
     }
     public void Reset()
     {
